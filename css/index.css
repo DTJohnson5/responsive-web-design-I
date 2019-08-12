@@ -1,3 +1,345 @@
 /* Use your own code or past solution for Great Idea Web Page CSS here! */
 
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Set every element's box-sizing to border-box */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+/* Copy and paste your work from yesterday here and start to refactor into flexbox */
+
+.container{
+  width: 880px;
+  margin: 0 auto;
+}
+
+header {
+width: 100%;
+display: flex;
+background: white;
+align-items: center;
+}
+
+header nav {	
+    display: flex;
+	justify-content: space-between;
+	width: 100%;
+	margin-top: 30px;
+}
+
+header nav a {
+color: #B0B0B0;
+text-decoration: none;
+}
+
+header nav a:hover {
+    color: grey;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+header .logo {
+    margin: 26px 0 0 90px;
+}
+
+.action {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 72px;
+  }
+  
+  .action .aText {
+      font-size: 72px;
+      text-align: center;
+      letter-spacing: 5px;
+      display: flex;
+      justify-content: center;	
+      flex-flow: column;
+      align-items: center;
+      margin: 0 82px 0 0;
+  }
+  
+  .action .aText button {
+      cursor: pointer;
+      background: white;
+      width: 170px;
+      height: 32px;
+      border: 1px double black;
+      font-size: 16px;
+      margin-top: 10px;
+  }
+  
+  .action .aText button:hover {
+      cursor: pointer;
+      font-family: Bangers, cursive;
+      color: black;
+      background: white;
+      width: 200px;
+      height: 32px;
+      border: 2px double black;
+      margin-top: 10px;
+  }
+  
+  .Top {
+      font-size: 16px;
+      padding: 35px 0;
+      line-height: 18px;
+      margin: 75px 0 35px 0;
+      border-top: 2px solid black;
+      border-bottom: 2px solid black;
+  }
+  
+  .Top .Top1 {
+      display: flex;
+  }
+  
+  .Top .middle-img {
+      display: block;
+      width: 100%;
+      margin: 30px auto;
+  }
+  
+  .Top .Bottom {
+      display: flex;
+  }
+  
+  .Top .Bottom p {
+      padding-right: 20px;
+  }
+
+.Contact p {
+margin: 20px 0;
+}
+
+footer {
+margin: 32px 0;
+text-align: center;
+font-size: 14px;
+}
+
+/* Tablet view */
+
+@media (max-width: 800px) {
+    .container {
+        width: 100%;
+    }
+
+    header {
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+    }
+
+    header nav {
+        width: 768px;
+        padding: 0 30px;
+    }
+
+    header .logo {
+        margin: 0 auto;
+    }
+
+    .action {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .action .aText {
+        display: flex;
+        flex-direction: column;
+        margin: 25px 5px 25px 0px;
+        text-align: center;
+    }
+    
+    .action img{
+        display: none;
+    }
+
+    .Top {
+        display: flex;
+        margin: 15px;
+    align-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    }
+    
+    .Top .Top1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .Top .Top1 .Text {
+        margin-bottom: 20px;
+    }
+        
+        .Top .middle-img {
+            width: 100%;
+            }
+    
+            .Top .Bottom {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+            }
+    
+            .Top .Bottom .Text {
+                margin-bottom: 20px;
+            }
+    
+            .Contact {
+                width: 100%;
+                margin: 15px;
+            }
+}
+
+/* Mobile view */
+
+@media (max-width: 500px){
+
+    .container {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    header {
+        display: flex;
+        flex-direction: column-reverse;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    header nav {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        align-content: space-between;
+        width: 500px;
+    }
+
+    header nav a {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        font-size: 1.1rem;
+        margin: 12px;
+padding: 12px;
+border-bottom: 1px solid grey;
+    }
+
+    header .logo {
+        display: flex;
+        margin-top: 15px;
+        padding: 15px;
+        border-bottom: 1px solid grey;
+        align-items: center;
+    }
+
+    img{
+        display: none;
+    }
+
+    .action {
+        margin: 15px;
+    }
+
+    .action .aText img {
+        display: none;
+    }
+
+    .Top {
+        display: flex;
+        margin: 15px;
+        align-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Top .Top1 {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+    }
+    
+    .Top middle-img {
+        width: 100%;
+    }
+
+    .Top .Bottom {
+display: flex;
+        flex-direction: column;
+        align-content: center;
+    }
+
+    .Text {
+        margin: 15px;
+    }
+
+    .contact {
+        width: 100%;
+        margin: 20px;
+    }
+
+}
+
 
